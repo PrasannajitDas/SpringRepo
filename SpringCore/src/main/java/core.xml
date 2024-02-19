@@ -8,4 +8,25 @@
 
 <bean id="mypen" class="springcore.Pen"></bean>	<!--to add POJO classes, id="key for pojo class" class="fully qualified name of pojo class"-->
  
+ <bean id="mycar" class="springcore.setterinjection.Car">
+	 
+	 <!--To achieve setter injection-->
+	 <property name="regId" value="0001"></property>
+	 <property name="brand" value="RangeRover"></property>
+	 <property name="color" value="Black"></property>
+	 <!--Now during instantiation of Car POJO class, Ioc container will set the values of these properties of Car
+	 Car class using setter methods of Car class, so setter methods are mandatory to achieve setter-injection. -->
+	 
+	 
+ </bean>
+ 
+ 
+ <bean id="company" class="springcore.setterinjection.Company">
+	 <property name="id" value="1001"></property>
+	 <property name="name" value="EightFoldAI"></property>
+	 <property name="brandValue" value="9000 Crores"></property>
+	 <property name="ceo" value="Asutosh Garg"></property>
+ </bean>
+ 
+ 
 </beans>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean id="mymobile" class="springcore.DIwithSI.Mobile">
+		<property name="id" value="1"></property>
+		<property name="brand" value="RealMe"></property>
+		<property name="price" value="25599"></property>
+		<property name="model" value="10 Pro+ 5g"></property>
+		<property name="sim" ref="mysim"></property>
+	</bean>
+	
+	<bean id="mysim" class="springcore.DIwithSI.Sim">
+		<property name="id" value="01"></property>
+		<property name="name" value="Jio"></property>
+		<property name="type" value="5g"></property>
+		
+	</bean>
+    
+</beans>
