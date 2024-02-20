@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    
+    <bean id="mypencil" class="springcore.constructorinjection.Pencil" scope="prototype"><!--Changing scope to prorotype, so now each time ioc will create new object-->
+		<constructor-arg name="id" value="101"></constructor-arg>
+		<constructor-arg name="name" value="apsara"></constructor-arg>
+		<constructor-arg name="price" value="10"></constructor-arg>
+	</bean>
+    <bean id="momob" class="springcore.DIwithCI.Mobile1"> 
+		<constructor-arg name="id" value="1"></constructor-arg>
+		<constructor-arg name="brand" value="RealMe"></constructor-arg>
+		<constructor-arg name="price" value="20000"></constructor-arg>
+		<constructor-arg name="sm" ref="mosim"></constructor-arg>
+	</bean>
+	<bean id="mosim" class="springcore.DIwithCI.Sim">
+		<constructor-arg name="id" value="1"></constructor-arg>
+		<constructor-arg name="brand" value="airtel"></constructor-arg>
+		<constructor-arg name="type" value="5g"></constructor-arg>
+		
+	</bean>
+	
+	<bean id="motv" class="springcore.DIwithCI.Television">
+		<constructor-arg name="remote" ref="moremote"></constructor-arg>
+	</bean>
+	<bean id="moremote" class="springcore.DIwithCI.Remote"></bean>
+     
+</beans>

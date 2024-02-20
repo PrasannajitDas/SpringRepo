@@ -20,5 +20,8 @@
 		<property name="type" value="5g"></property>
 		
 	</bean>
-    
+    <bean id="myremote" class="springcore.DIwithSI.Remote"></bean>
+    <bean id="mytv" class="springcore.DIwithSI.TV">
+		<property name="r" ref="myremote"></property>
+	</bean>
 </beans>

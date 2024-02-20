@@ -6,7 +6,7 @@ public class Mobile {
 	private double price;
 	private String model;
 	
-	private Sim sim;
+	private Sim sim;	// Sim is the dependency here
 
 	public int getId() {
 		return id;
