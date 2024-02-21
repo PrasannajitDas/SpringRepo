@@ -1,5 +1,8 @@
 package springcore_applicationcontext;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class Pencil {
 	
 	public Pencil() {

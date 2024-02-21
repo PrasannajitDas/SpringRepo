@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope(value = "prototype")//@Scope annotation is used to modify the scope of a bin.
+@Scope(value = "prototype")//@Scope annotation is used to modify the scope of a bean.
 public class Car {
 	
 	@Value("1")
